@@ -136,9 +136,11 @@ def main(file_path):
    
     # List post code based on fastest response
     post_code_by_response_time = clean_df.groupby(['Post Code '])['Response_Time'].min()
+    print(post_code_by_response_time)
     
     # TOP agent based on postcode and amount
     top_agent_by_postcode_df = clean_df.loc[clean_df.groupby(['Post Code '])["$ Amount "].idxmax()][['Post Code ','Agent ID ','$ Amount ']]  
+    print(top_agent_by_postcode_df)
     
     # select output columns
     df_output = clean_df[output_columns]
