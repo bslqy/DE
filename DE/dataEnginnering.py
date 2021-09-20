@@ -160,6 +160,6 @@ if __name__ == '__main__':
     #     file_full_path = str(sys.argv[1])
     # except Exception as e:
     #     raise ValueError(f"Usage : python3 dataEnginnering.py [csv_full_path] ")
-    main('D:/UoM/Jupyter/Transaction.csv')
+    main('./Transaction.csv')
     
 
